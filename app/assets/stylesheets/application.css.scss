@@ -57,6 +57,18 @@ h1,h2,h3 {
     opacity: 0.50;
   }
 }
+//Class name heirarchy
+.navbar-default .navbar-toggle .icon-bar {
+  background-color:white;
+  border: 3px;
+}
+.navbar-default .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {
+    background-color: #267871;
+  }
+}
+
 
 
 
