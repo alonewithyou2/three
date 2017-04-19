@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
    def new
-      #instant variable if it has a @ symbol
+      #instance variable if it has a @ symbol
       @contact = Contact.new
    end
    
