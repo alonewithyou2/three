@@ -1,6 +1,7 @@
 class ContactsController < ApplicationController
    def new
       #instance variable if it has a @ symbol
+      #creates an object that has name: , email:, and comments: with NO values yet
       @contact = Contact.new
    end
    
