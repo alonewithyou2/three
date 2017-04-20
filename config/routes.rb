@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   #8 different routes as seen when yuo type in 'rails routes', RESTful routes
   #
   resources :contacts
+  get 'contact-us', to:'contacts#new'
 end
