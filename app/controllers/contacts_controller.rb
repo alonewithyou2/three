@@ -6,11 +6,13 @@ class ContactsController < ApplicationController
    end
    
    def create
-      @contact = Contact.new(contact_params)
+      @contact = Contact.new(contact_params) #[error, error2] the error will be in an array
       if @contact.save
-         redirect_to new_contact_path, notice: "Comment sent!"
+         flash[:sucess] = "Message sent."
+         redirect_to new_contact_path
       else
-         redirect_to new_contact_path, notice: "Error occured, please check that all forms are filled"
+         flash[:error] = @contact.errors.full_messages.join(", ")
+         redirect_to new_contact_path
       end
    end
    
