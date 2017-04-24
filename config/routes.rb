@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   #added the below because resources then any object, such as :contacts, then it expands into
   #8 different routes as seen when yuo type in 'rails routes', RESTful routes
   #
-  resources :contacts
-  get 'contact-us', to:'contacts#new'
+  resources :contacts, only: :create
+  
+  #changes URL to contact-us instead of /contact/new
+  get 'contact-us', to: 'contacts#new', as: 'new_contact'
 end

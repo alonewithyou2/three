@@ -2,9 +2,11 @@ class ContactsController < ApplicationController
    def new
       #instance variable if it has a @ symbol
       #creates an object that has name: , email:, and comments: with NO values yet
+      #creates a blank object: name, email, comments
       @contact = Contact.new
    end
    
+   #create the object in the machines memory, save it to the machine's database
    def create
       @contact = Contact.new(contact_params) #[error, error2] the error will be in an array
       if @contact.save
