@@ -37,6 +37,10 @@ gem 'font-awesome-sass', '4.7.0'
 #Use Hirb for better database display/representation in console
 gem 'hirb', '0.7.3'
 
+# Use Devise gem for user authentication, or log in/log out
+gem 'devise', '4.2.0'
+
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
