@@ -15,10 +15,16 @@ class ContactsController < ApplicationController
          #grab the name the customer put in, and the email and the comments"
          #and store them in the 'name', 'email', and 'body' variable and use those
          #variables on line 22 when we deliver that email or message.
+         #key value pair, the key is the 'contact' and their are currently 3 values in it,
+         #which is name, email, and comments. and we can decide which value we want when we type
+         #:name, or :email, or :comments, each being a value of the key ':contact'
+         #the below is a nested hash, contact is one hash, and the name is a nested hash inside the hash
+         
          name = params[:contact][:name]
          email = params[:contact][:email]
          body = params[:contact][:comments]
-         #This sends the email to us, to andy.le007@yahoo.com
+         #This sends the email to us, to andy.le007@yahoo.com, this is called an object
+         #that is coming to 'life'
          ContactMailer.contact_email(name, email, body).deliver
          
          flash[:success] = "Message sent."
